@@ -1,0 +1,48 @@
+﻿@model KatmanliMimari.Models.SinifModel
+@{
+	ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<form action="/Sinf/Index" method="post">
+	<input type="text" placeholder="Ara.." name="name">
+	<button type="submit" class="btn btn-success">Arama</button>
+</form>
+<hr />
+
+<a href="/Sinif/Ekle" class="btn btn-info">Kategori Ekle</a>
+<a href="/Sinif/Sec" class="btn btn-warning ">Kategori Sec</a>
+<div class="container">
+	<div class="row">
+		<table class="table table-striped table-bordered table-hover">
+			<thead class="text-center">
+				<tr>
+					<th>@Html.DisplayNameFor(x => x.sinif.SinifID)</th>
+					<th>@Html.DisplayNameFor(x => x.sinif.Sube)</th>
+					<th>@Html.DisplayNameFor(x => x.sinif.SinifMevcudu)</th>
+					<th>@Html.DisplayNameFor(x=> x.sinif.Kademe)</th>
+					
+					<th></th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody class="text-center">
+				@foreach (var item in Model.sinifList)
+				{
+					<tr>
+						<td>@item.SinifID</td>
+						<td>@item.Sube</td>
+						<td>@item.SinifMevcudu</td>
+						<td>@item.Kademe</td>
+
+						<td> <a href="/Sinif/Detay/@item.SinifID" class="btn btn-success">Detay</a></td>
+						<td> <a href="/Sinif/Guncel/@item.SinifID" class="btn btn-primary">Güncelle</a></td>
+						<td> <a href="/Sinf/Sil/@item.SinifID" class="btn btn-danger">Sil</a></td>
+
+					</tr>
+				}
+			</tbody>
+		</table>
+	</div>
+</div>

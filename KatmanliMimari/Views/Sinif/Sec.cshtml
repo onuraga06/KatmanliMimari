@@ -1,0 +1,32 @@
+﻿@model KatmanliMimari.Models.SinifModel 
+@{
+	ViewBag.Title = "Sec";
+}
+
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>@Html.LabelFor(x => x.sinif.SinifID)</th>
+			<th>@Html.LabelFor(x => x.sinif.Sube)</th>
+			<th>@Html.LabelFor(x => x.sinif.SinifMevcudu)</th>
+			<th>@Html.LabelFor(x => x.sinif.Kademe)</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model.sinifList)
+		{
+			<tr>
+				<td>@item.SinifID</td>
+				<td>@item.Sube</td>
+				<td>@item.SinifMevcudu</td>
+				<td>@item.Kademe</td>
+			</tr>
+
+		}
+	</tbody>
+
+</table>
+<br />
+<div class="form-group">
+	<a href="/Sinif/Index" class="btn btn-success">Listeye Geri Don</a>
+</div>

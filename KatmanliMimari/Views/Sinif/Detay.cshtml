@@ -1,0 +1,22 @@
+﻿@model KatmanliMimari.Models.SinifModel
+@{
+	ViewBag.Title = "Detay";
+}
+
+<dl>
+	<dt>@Html.DisplayNameFor(x => x.sinif.SinifID)</dt>
+	<dd>@Html.DisplayFor(x => x.sinif.SinifID)</dd>
+	<dt>@Html.DisplayNameFor(x => x.sinif.Sube)</dt>
+	<dd>@Html.DisplayFor(x => x.sinif.Sube)</dd>
+	<dt>@Html.DisplayNameFor(x => x.sinif.SinifMevcudu)</dt>
+	<dd>@Html.DisplayFor(x => x.sinif.SinifMevcudu)</dd>
+	<dt>@Html.DisplayNameFor(x => x.sinif.Kademe)</dt>
+	<dd>@Html.DisplayFor(x => x.sinif.Kademe)</dd>
+
+</dl>
+<br />
+<div class="form-group">
+	<a href="/Sinif/Index" class="btn btn-success">Listeye Geri Don</a>
+</div>
+
+
