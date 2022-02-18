@@ -11,11 +11,11 @@ namespace Mimari_Entity
     {
         public int SinifID { get; set; }
         [Required]
-        public string Kademe { get; set; }
+        public int Kademe { get; set; }
         [Required]
         public string Sube { get; set; }
 
-        public string SinifMevcudu { get; set; }
+        public int SinifMevcudu { get; set; }
         public ICollection<Ogrenci> Ogrenciler { get; set; }
        
     }

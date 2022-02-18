@@ -52,9 +52,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataBaseContext.cs" />
-    <Compile Include="Migrations\202202180558295_DB.cs" />
-    <Compile Include="Migrations\202202180558295_DB.designer.cs">
-      <DependentUpon>202202180558295_DB.cs</DependentUpon>
+    <Compile Include="Migrations\202202181038508_Asasad.cs" />
+    <Compile Include="Migrations\202202181038508_Asasad.designer.cs">
+      <DependentUpon>202202181038508_Asasad.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -70,8 +70,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202202180558295_DB.resx">
-      <DependentUpon>202202180558295_DB.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202202181038508_Asasad.resx">
+      <DependentUpon>202202181038508_Asasad.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

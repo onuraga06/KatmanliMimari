@@ -16,12 +16,12 @@
 		<table class="table table-striped table-bordered table-hover">
 			<thead class="text-center">
 				<tr>
-					<th>@Html.DisplayNameFor(x => x.ogrenci.OgrenciID)</th>
 					<th>@Html.DisplayNameFor(x => x.ogrenci.OgrenciAd)</th>
 					<th>@Html.DisplayNameFor(x => x.ogrenci.OgrenciSoyad)</th>
 					<th>@Html.DisplayNameFor(x => x.ogrenci.Adres)</th>
-					<th>@Html.DisplayNameFor(x => x.ogrenci.Kademe)</th>
-					<th>@Html.DisplayNameFor(x => x.ogrenci.Sube)</th>
+					<th>@Html.DisplayNameFor(x => x.sinif.Kademe)</th>
+					<th>@Html.DisplayNameFor(x => x.sinif.Sube)</th>
+					<th>@Html.DisplayNameFor(x => x.ogrenci.Yas)</th>
 					
 
 					<th></th>
@@ -32,12 +32,12 @@
 				@foreach (var item in Model.ogrlist)
 				{
 					<tr>
-						<td>@item.OgrenciID</td>
 						<td>@item.OgrenciAd</td>
 						<td>@item.OgrenciSoyad</td>
 						<td>@item.Adres</td>
 						<td>@item.Kademe</td>
 						<td>@item.Sube</td>
+						<td>@item.Yas</td>
 						<td> <a href="/Sinif/Detay/@item.OgrenciID" class="btn btn-success">Detay</a></td>
 						<td> <a href="/Sinif/Guncel/@item.OgrenciID" class="btn btn-primary">Güncelle</a></td>
 						<td> <a href="/Sinf/Sil/@item.OgrenciID" class="btn btn-danger">Sil</a></td>

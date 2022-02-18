@@ -70,10 +70,16 @@ namespace KatmanliMimari.Controllers
             if (ModelState.IsValid)
             {
                 Sinif s = new Sinif();
-                s.SinifID = sm.sinif.SinifID;
                 s.Sube = sm.sinif.Sube;
-                s.SinifMevcudu = sm.sinif.SinifMevcudu;
                 s.Kademe = sm.sinif.Kademe;
+                if(sp.GetList().Where(x=> x.Sube==sm.sinif.Sube && x.Kademe == sm.sinif.Kademe).Count() == null)
+                {
+                    s.SinifMevcudu = 0;
+                }
+                else
+                {
+                    s.SinifMevcudu = sm.sinif.SinifMevcudu;
+                }
                 sp.Add(s);
                 sp.Save();
                 return RedirectToAction("Index");

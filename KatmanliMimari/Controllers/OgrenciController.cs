@@ -49,11 +49,14 @@ namespace KatmanliMimari.Controllers
                 Ogrenci o = new Ogrenci();
                 o.OgrenciAd = sm.ogrenci.OgrenciAd;
                 o.OgrenciSoyad = sm.ogrenci.OgrenciSoyad;
-                o.Kademe = Convert.ToInt32(sm.sinif.Kademe);
+                o.Kademe = sm.sinif.Kademe;
                 o.Sube = sm.sinif.Sube;
                 o.Adres = sm.ogrenci.Adres;
                 rep.Add(o);
                 rep.Save();
+                model.sinif = sep.Set().FirstOrDefault(x => x.Sube == sm.sinif.Sube && x.Kademe == sm.sinif.Kademe);
+                model.sinif.SinifMevcudu += 1;
+                sep.Save();
                 return RedirectToAction("Index");
             }
             return View();
