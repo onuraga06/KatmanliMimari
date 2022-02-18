@@ -1,0 +1,54 @@
+﻿@model KatmanliMimari.Models.SinifModel
+@{
+	ViewBag.Title = "Ekle";
+}
+
+@using (Html.BeginForm())
+{
+	<div class="form-horizon">
+		@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+		<div class="form-group">
+			@Html.LabelFor(x => x.ogrenci.OgrenciID, htmlAttributes: new { @class = "control-label col-md-2" })
+			<div class="col-md-10">
+				@Html.EditorFor(x => x.ogrenci.OgrenciID, new { htmlAttributes = new { @class = "form-control" } })
+			</div>
+		</div>
+	</div>
+
+	<div class="form-horizon">
+		@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+		<div class="form-group">
+			@Html.LabelFor(x => x.ogrenci.OgrenciAd, htmlAttributes: new { @class = "control-label col-md-2" })
+			<div class="col-md-10">
+				@Html.EditorFor(x => x.ogrenci.OgrenciAd, new { htmlAttributes = new { @class = "form-control" } })
+			</div>
+		</div>
+	</div>
+	<div class="form-horizon">
+		@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+		<div class="form-group">
+			@Html.LabelFor(x => x.ogrenci.OgrenciSoyad, htmlAttributes: new { @class = "control-label col-md-2" })
+			<div class="col-md-10">
+				@Html.EditorFor(x => x.ogrenci.OgrenciSoyad, new { htmlAttributes = new { @class = "form-control" } })
+			</div>
+		</div>
+	</div>
+	<div class="form-group fw-bold">
+		@Html.LabelFor(m => m.ogrenci.Sube, htmlAttributes: new { @class = "control-label cod-md-2" })
+		<div class="col-md-10">
+			@Html.DropDownListFor(m => m.ogrenci.Sube, Model.SubeListesi,"**Şube Listesi Seçiniz**", new { htmlAttributes = new { @class = "form-control" } })
+		</div>
+	</div>
+	<div class="form-group fw-bold">
+		@Html.LabelFor(m => m.ogrenci.Kademe, htmlAttributes: new { @class = "control-label cod-md-2" })
+		<div class="col-md-10">
+			@Html.DropDownListFor(m => m.ogrenci.Kademe, Model.KademeListesi, "**Kademe Listesi Seçiniz**", new { htmlAttributes = new { @class = "form-control" } })
+		</div>
+	</div>
+}
+	<br />
+	<div class="form-group">
+		<input type="submit" value="Ekle" class="btn btn-primary" />
+		<a href="/Sinif/Index" class="btn btn-success">Listeye Geri Don</a>
+	</div>
+

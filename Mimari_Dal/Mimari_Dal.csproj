@@ -52,17 +52,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataBaseContext.cs" />
-    <Compile Include="Migrations\202202170655026_CreateTable.cs" />
-    <Compile Include="Migrations\202202170655026_CreateTable.designer.cs">
-      <DependentUpon>202202170655026_CreateTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202202170908385_CreateTable2.cs" />
-    <Compile Include="Migrations\202202170908385_CreateTable2.designer.cs">
-      <DependentUpon>202202170908385_CreateTable2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202202171114336_Duzenleme.cs" />
-    <Compile Include="Migrations\202202171114336_Duzenleme.designer.cs">
-      <DependentUpon>202202171114336_Duzenleme.cs</DependentUpon>
+    <Compile Include="Migrations\202202180558295_DB.cs" />
+    <Compile Include="Migrations\202202180558295_DB.designer.cs">
+      <DependentUpon>202202180558295_DB.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -78,14 +70,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202202170655026_CreateTable.resx">
-      <DependentUpon>202202170655026_CreateTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202202170908385_CreateTable2.resx">
-      <DependentUpon>202202170908385_CreateTable2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202202171114336_Duzenleme.resx">
-      <DependentUpon>202202171114336_Duzenleme.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202202180558295_DB.resx">
+      <DependentUpon>202202180558295_DB.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

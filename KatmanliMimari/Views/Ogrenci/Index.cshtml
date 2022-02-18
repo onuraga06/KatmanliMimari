@@ -1,0 +1,51 @@
+﻿@model KatmanliMimari.Models.SinifModel
+@{
+	ViewBag.Title = "Index";
+}
+
+<form action="/Sinf/Index" method="post">
+	<input type="text" placeholder="Ara.." name="name">
+	<button type="submit" class="btn btn-success">Arama</button>
+</form>
+<hr />
+
+<a href="/Ogrenci/Ekle" class="btn btn-info">Kategori Ekle</a>
+<a href="/Ogrenci/Sec" class="btn btn-warning ">Kategori Listele</a>
+<div class="container">
+	<div class="row">
+		<table class="table table-striped table-bordered table-hover">
+			<thead class="text-center">
+				<tr>
+					<th>@Html.DisplayNameFor(x => x.ogrenci.OgrenciID)</th>
+					<th>@Html.DisplayNameFor(x => x.ogrenci.OgrenciAd)</th>
+					<th>@Html.DisplayNameFor(x => x.ogrenci.OgrenciSoyad)</th>
+					<th>@Html.DisplayNameFor(x => x.ogrenci.Adres)</th>
+					<th>@Html.DisplayNameFor(x => x.ogrenci.Kademe)</th>
+					<th>@Html.DisplayNameFor(x => x.ogrenci.Sube)</th>
+					
+
+					<th></th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody class="text-center">
+				@foreach (var item in Model.ogrlist)
+				{
+					<tr>
+						<td>@item.OgrenciID</td>
+						<td>@item.OgrenciAd</td>
+						<td>@item.OgrenciSoyad</td>
+						<td>@item.Adres</td>
+						<td>@item.Kademe</td>
+						<td>@item.Sube</td>
+						<td> <a href="/Sinif/Detay/@item.OgrenciID" class="btn btn-success">Detay</a></td>
+						<td> <a href="/Sinif/Guncel/@item.OgrenciID" class="btn btn-primary">Güncelle</a></td>
+						<td> <a href="/Sinf/Sil/@item.OgrenciID" class="btn btn-danger">Sil</a></td>
+
+					</tr>
+				}
+			</tbody>
+		</table>
+	</div>
+</div>
+

@@ -102,11 +102,11 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OgrenciController.cs" />
     <Compile Include="Controllers\SinifController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\OgrenciModel.cs" />
     <Compile Include="Models\SinifModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -121,6 +121,8 @@
     <Content Include="Views\Sinif\Guncel.cshtml" />
     <Content Include="Views\Sinif\Ekle.cshtml" />
     <Content Include="Views\Sinif\Sec.cshtml" />
+    <Content Include="Views\Ogrenci\Index.cshtml" />
+    <Content Include="Views\Ogrenci\Ekle.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

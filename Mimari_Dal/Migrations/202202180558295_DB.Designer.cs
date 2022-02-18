@@ -7,13 +7,13 @@ namespace Mimari_Dal.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class CreateTable2 : IMigrationMetadata
+    public sealed partial class DB : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(CreateTable2));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(DB));
         
         string IMigrationMetadata.Id
         {
-            get { return "202202170908385_CreateTable2"; }
+            get { return "202202180558295_DB"; }
         }
         
         string IMigrationMetadata.Source

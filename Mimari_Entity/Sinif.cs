@@ -17,5 +17,6 @@ namespace Mimari_Entity
 
         public string SinifMevcudu { get; set; }
         public ICollection<Ogrenci> Ogrenciler { get; set; }
+       
     }
 }

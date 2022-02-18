@@ -17,10 +17,11 @@ namespace Mimari_Entity
         public string OgrenciSoyad { get; set; }
         [StringLength(200)]
         public string Adres { get; set; }
-        public DateTime Yas { get; set; }
+        public int  Yas { get; set; }
         [ForeignKey("Sinif")]
         public int Kademe { get; set; }
         //public int SinifID { get; set; }
+        public string Sube { get; set; }
         public Sinif Sinif { get; set; }
     }
 }
