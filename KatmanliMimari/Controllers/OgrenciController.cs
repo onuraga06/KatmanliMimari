@@ -61,5 +61,17 @@ namespace KatmanliMimari.Controllers
             }
             return View();
         }
+        public ActionResult Sil(int id)
+        {
+            Ogrenci o = rep.Bul(id);
+          
+            model.sinif = sep.Set().FirstOrDefault(x => x.Sube == o.Sube && x.Kademe == o.Kademe);
+            rep.Delete(o);
+            rep.Save();
+            model.sinif.SinifMevcudu -= 1;
+            sep.Save();
+            return RedirectToAction("Index");
+
+        }
     }
 }

@@ -37,7 +37,7 @@ namespace KatmanliMimari.Controllers
             Sinif s = sp.Bul(id);
             sp.Delete(s);
             sp.Save();
-            return View();
+            return RedirectToAction("Index");
         }
         public ActionResult Guncel(int id)
         {

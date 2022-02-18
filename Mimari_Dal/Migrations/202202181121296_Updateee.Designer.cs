@@ -7,13 +7,13 @@ namespace Mimari_Dal.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class Asasad : IMigrationMetadata
+    public sealed partial class Updateee : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Asasad));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Updateee));
         
         string IMigrationMetadata.Id
         {
-            get { return "202202181038508_Asasad"; }
+            get { return "202202181121296_Updateee"; }
         }
         
         string IMigrationMetadata.Source
